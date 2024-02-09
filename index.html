@@ -349,14 +349,31 @@ $( ".lammoipopupnhantien" ).hover(
                   document.getElementById("annhantien").style.display = "none"; // Ẩn nút nhận tiền
                   document.getElementById("xuatsotien").src = ""; // Xoá ảnh tiền
 
-                  swal("Đen thôi đỏ quên đi con lợn ạ", " Không nhận được đồng nào đâu\nNhưng bạn còn lại " + (solanquay - dem) + " lần quay, cố gắng lên !", "error");
+                  swal({
+                    title: "Đen thôi đỏ quên đi con lợn ạ",
+                    text: "Không nhận được đồng nào đâu\nNhưng bạn còn lại " + (solanquay - dem) + " lần quay, cố gắng lên !",
+                    imageUrl: "./img/anh4.jpg",
+                    imageWidth: 600, // Kích thước chiều rộng của hình ảnh
+                    imageHeight: 400, // Kích thước chiều cao của hình ảnh
+                    imageAlt: "Mất lượt"
+                });
+                   // "Đen thôi đỏ quên đi con lợn ạ", " Không nhận được đồng nào đâu\nNhưng bạn còn lại " + (solanquay - dem) + " lần quay, cố gắng lên !", "error");
               } else if (indicatedSegment.text == '1.000 VNĐ' || '2.000 VNĐ' || '5.000 VNĐ'){ // Nếu quay vào ô 1k, 2k, 5k
                   votay.play(); // Bật nhạc vỗ tay
 
                   document.getElementById("annhantien").style.display = ""; // Hiển thị nút nhận tiền
                   document.getElementById("xuatsotien").src = "img/" + indicatedSegment.text.replace(".000 VNĐ", "") + "k.jpg"; // Xuất ảnh tiền
 
-                  swal("Nhận đi có còn hơn không!", "Bạn nhận được " + indicatedSegment.text + "\nBạn còn lại " + (solanquay - dem) + " lần quay\nChú ý: Nếu quay tiếp là sẽ mất số tiền trước đó đấy!", "success");
+                  swal({
+                    title: "Nhận đi có còn hơn không!",
+                    text: "Bạn nhận được " + indicatedSegment.text + "\nBạn còn lại " + (solanquay - dem) + " lần quay\nChú ý: Nếu quay tiếp là sẽ mất số tiền trước đó đấy!",
+                    imageUrl: "./img/anh5.jpg",
+                    imageWidth: 600, // Kích thước chiều rộng của hình ảnh
+                    imageHeight: 400, // Kích thước chiều cao của hình ảnh
+                    imageAlt: "Thưởng"
+                });
+            
+                    //"Nhận đi có còn hơn không!", "Bạn nhận được " + indicatedSegment.text + "\nBạn còn lại " + (solanquay - dem) + " lần quay\nChú ý: Nếu quay tiếp là sẽ mất số tiền trước đó đấy!", "success");
               }
               else if (indicatedSegment.text == '10.000 VNĐ' || '20.000 VNĐ' || '50.000 VNĐ'){ // Nếu quay vào ô 10k, 20k, 50k
                 votay.play(); // Bật nhạc vỗ tay
@@ -364,7 +381,15 @@ $( ".lammoipopupnhantien" ).hover(
                 document.getElementById("annhantien").style.display = ""; // Hiển thị nút nhận tiền
                 document.getElementById("xuatsotien").src = "img/" + indicatedSegment.text.replace(".000 VNĐ", "") + "k.jpg"; // Xuất ảnh tiền
 
-                swal("Cũng được rồi, thế thôi!", "Bạn nhận được " + indicatedSegment.text + "\nBạn còn lại " + (solanquay - dem) + " lần quay\nChú ý: Nếu quay tiếp là sẽ mất số tiền trước đó đấy!", "success");
+                swal( {
+                  title: "Cũng được rồi, thế thôi!",
+                  text: "Bạn nhận được " + indicatedSegment.text + "\nBạn còn lại " + (solanquay - dem) + " lần quay\nChú ý: Nếu quay tiếp là sẽ mất số tiền trước đó đấy!",
+                  imageUrl: "./img/anh5.jpg",
+                  imageWidth: 600, // Kích thước chiều rộng của hình ảnh
+                  imageHeight: 400, // Kích thước chiều cao của hình ảnh
+                  imageAlt: "Thưởng"
+              });
+                //  "Cũng được rồi, thế thôi!", "Bạn nhận được " + indicatedSegment.text + "\nBạn còn lại " + (solanquay - dem) + " lần quay\nChú ý: Nếu quay tiếp là sẽ mất số tiền trước đó đấy!", "success");
             }
             else if (indicatedSegment.text == '100.000 VNĐ'){ // Nếu quay vào ô 100k
               votay.play(); // Bật nhạc vỗ tay
@@ -372,7 +397,15 @@ $( ".lammoipopupnhantien" ).hover(
               document.getElementById("annhantien").style.display = ""; // Hiển thị nút nhận tiền
               document.getElementById("xuatsotien").src = "img/" + indicatedSegment.text.replace(".000 VNĐ", "") + "k.jpg"; // Xuất ảnh tiền
 
-              swal("Tết ấm no rồi!", "Bạn nhận được " + indicatedSegment.text + "\nBạn còn lại " + (solanquay - dem) + " lần quay\nChú ý: Sướng rồi, quay tiếp làm gì nữa, mất đấy!", "success");
+              swal({
+                title: "Tết ấm no rồi!",
+                text: "Bạn nhận được " + indicatedSegment.text + "\nBạn còn lại " + (solanquay - dem) + " lần quay\nChú ý: Sướng rồi, quay tiếp làm gì nữa, mất đấy!",
+                imageUrl: "./img/anh2.jpg",
+                imageWidth: 600, // Kích thước chiều rộng của hình ảnh
+                imageHeight: 400, // Kích thước chiều cao của hình ảnh
+                imageAlt: "Thưởng"
+            });
+                //"Tết ấm no rồi!", "Bạn nhận được " + indicatedSegment.text + "\nBạn còn lại " + (solanquay - dem) + " lần quay\nChú ý: Sướng rồi, quay tiếp làm gì nữa, mất đấy!", "success");
           }
           } else { // Nếu hết lượt quay(dem = solanquay)
               document.getElementById("xuatluotquay").innerHTML = "0";
